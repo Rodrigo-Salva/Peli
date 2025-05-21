@@ -5,12 +5,6 @@ import HeaderComponent from "../components/HeaderComponent"
 
 function SerieFormPage(){
 
-    const navigate  = useNavigate();
-
-    const gotoUrl = (codigo) => {
-        navigate("/series"+codigo);
-    }
-
     const series = [
         {cod:1, nom: "Friends", cat:"Comedy", img: "friends.png"},      
         {cod:2, nom: "Law & Order", cat:"Drama", img: "Law-and-Order.png"},
@@ -75,11 +69,11 @@ function SerieFormPage(){
                         </div>
                         <div className="mb-3">
                             <button className="btn btn-primary">Guardar</button>
-                            <button className="btn btn-danger" onClick={()=>gotoUrl(props.codigo)} >Cancelar</button>
+                        <a className="btn btn-danger" href="/series">Cancelar</a>
                         </div>
                     </div>
                 </form>
-            </div>
+            </div>  
         </>
     )
 }
